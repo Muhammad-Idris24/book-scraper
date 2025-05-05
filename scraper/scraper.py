@@ -6,7 +6,7 @@ class BookScraper:
     def __init__(self):
         self.data = []
         
-    def scrape_books(self, num_pages=1):
+    def scrape(self, num_pages=1):  # Changed from scrape_books to scrape
         """Scrape books from the website"""
         for page in range(1, num_pages + 1):
             url = f"{BASE_URL}catalogue/page-{page}.html"

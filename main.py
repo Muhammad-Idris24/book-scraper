@@ -1,10 +1,10 @@
-from scraper.scraper import BookScraper
+from gui.app import ScraperApp
+import tkinter as tk
 
 def main():
-    print("Starting book scraper...")
-    scraper = BookScraper()
-    scraper.scrape_books(num_pages=3)  # Scrape first 3 pages
-    print("Scraping completed!")
+    root = tk.Tk()
+    app = ScraperApp(root)
+    root.mainloop()
 
 if __name__ == "__main__":
     main()
